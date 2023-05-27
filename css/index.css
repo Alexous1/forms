@@ -1,0 +1,242 @@
+
+/* main color */
+:root{
+    --bg-color: #212A3E;
+    --second-bg-color: #394867;
+    --third-bg-color: #CECECE;
+    --fourth-bg-color: #F1F6F9;
+}
+
+/* setting the page */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* setting the page */
+html{
+    background-color: var(--bg-color);
+}
+
+/* setting the body */
+body{
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+/* the component are in colon */
+.all_div{
+    display: flex;
+    flex-direction: row;
+}
+
+/* center and define the color for the left_div */
+.left_div{
+    background-color: var(--third-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 35vw;
+    height: 100vh;
+}
+
+/* center and define the color for the right_div */
+.right_div{
+    background-color: var(--second-bg-color);
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* setting the size for the images */
+.img{
+    width: 70px;
+    height: 70px;
+}
+
+/* center the div contact */
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* center and parameters the info contact(email, address, tel) */
+.email, .tel, .location{
+    background-color: var(--fourth-bg-color);
+    padding-top: 5px;
+    margin-top: 20px;
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 13px;
+    padding-bottom: 6px;
+}
+
+/* define the font-size for the sub-subtitles */
+h3{
+    font-size: 1.4em;
+    margin-top: 13px;
+}
+
+/* define the color and the font-size for the paragraph */
+p{
+    color: var(--second-bd-color);
+    margin-top: 7px;
+    padding-bottom: 10px;
+    font-size: 1.2em;
+}
+
+/* center the title */
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+/* define the font-size for the title */
+h1{
+    font-size: 4em;
+}
+
+/* center the sentences "for join us" */
+#join{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* sets the form in column*/
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+/* color and font-size for the label above the inputs */
+label {
+  color: var(--fourth-bg-color);
+  font-size: 1.3em;
+  margin-top: 20px;
+}
+
+/* shapes the input */
+input {
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+}
+
+/* shapes the input size */
+.inputs{
+    width: 30%;
+    height: 2%;
+    background-color: white;
+}
+
+/* shapes the input size */
+.inputs1{
+    width: 30%;
+}
+
+/* define the color for the inputs */
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* define the color for the inputs when they are hover */
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+/*responsive from page below 2000px */
+@media screen and (max-width: 2000px){
+
+    /* define the width for the right_div */
+    .right_div{
+        width: 65vw;
+    }
+
+    /* define the width for the left_div */
+    .left_div{
+        width: 35vw;
+    }
+
+}
+
+/*responsive from page below 1040px */
+@media screen and (max-width: 1040px){
+
+    /* sets the right_div and the left_div in column */
+    .all_div{
+        flex-direction: column;
+    }
+
+    /* define the width for the left_div */
+    .left_div{
+        width: 100vw;
+    }
+
+    /* define the width for the right_div and add space above and below the form */
+    .right_div{
+        width: 100vw;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+}
+
+/*responsive from page below 700px */
+@media screen and (max-width: 700px){
+
+    /* define the width for the inputs */
+    .inputs{
+        width: 50%;
+    }
+}
+
+/*responsive from page below 400px */
+@media screen and (max-width: 400px){
+
+    /* define the width for the inputs */
+    .inputs{
+        width: 60%;
+    }
+}
+
+/*responsive from page below 300px */
+@media screen and (max-width: 300px){
+
+     /* define the font-size for the title */
+    h1{
+        font-size: 3em;
+    }
+
+    /* define the font-size for the paragraph */
+    p{
+        font-size: 1em;
+    }
+
+     /* define the width for the inputs */
+    .inputs{
+        width: 80%;
+    }
+
+    /* define the font-size for the label (sentences above the forms inputs) */
+    label{
+        font-size: 1em;
+    }
+
+}
