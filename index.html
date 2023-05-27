@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Forms</title>
+</head>
+<body>
+
+    <!-- div who contains two div -->
+    <div class="all_div">
+        <!-- info div -->
+        <div class="left_div">
+
+            <!-- sentences div -->
+            <div class="title">
+
+                <!-- title -->
+                <h1>Demous</h1>
+
+                <!-- sentences -->
+                <p>The best form for your site</p>
+                <p>You have 10 days for free trial</p>
+            </div>
+
+            <!-- contact div -->
+            <div class="contact">
+
+                <!-- sentences -->
+                <h3 id="join">For join us :</h3>
+
+                <!-- email div -->
+                <div class="email">
+
+                    <!-- email img -->
+                    <img src="img/mail.png" class="img">
+                    <h3>Email</h3>
+                    <!-- email address -->
+                    <p>example@yourdomain.com</p>
+                </div>
+
+                <!-- tel div -->
+                <div class="tel">
+                    <!-- tel img -->
+                    <img src="img/phone.png" class="img">
+                    <h3>Telephone</h3>
+                    <!-- telephone number -->
+                    <p>+33 06 01 02 03 04</p>
+                </div>
+
+                <!-- address div -->
+                <div class="location">
+                    <!-- address img -->
+                    <img src="img/pin.png" class="img">
+                    <h3>Address</h3>
+                    <!-- Address img -->
+                    <p>75 Street name, city, country</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- forms div -->
+        <div class="right_div">
+
+            <!-- forms div -->
+            <div id="form-container">
+                <!-- info input -->
+                <form id="myForm">
+
+                    <!-- sentences -->
+                    <label for="name">Nom :</label>
+                    <!-- name input -->
+                    <input type="text" id="name" name="name" class="inputs" required>
+
+                    <!-- sentences -->
+                    <label for="email">Adresse email :</label>
+                    <!-- email input -->
+                    <input type="email" id="email" name="email" class="inputs" required>
+
+                    <!-- sentences -->
+                    <label for="phone">Numéro de téléphone :</label>
+                    <!-- phone number input -->
+                    <input type="tel" id="phone" name="phone" class="inputs" required>
+
+                    <!-- button -->
+                    <input type="submit" id="submit-btn" value="Envoyer" class="input1">
+                </form>
+
+                <!-- password input -->
+                <form id="password-form" style="display: none;">
+
+                    <!-- sentences -->
+                    <label for="password">Mot de passe :</label>
+
+                    <!-- password input -->
+                    <input type="password" id="password" name="password" class="inputs" required>
+
+                    <!-- button -->
+                    <input type="submit" value="Valider" class="input1">
+                </form>
+              </div>
+
+        </div>
+    </div>
+
+<script>
+
+    // associate an HTML tag with a variable
+    const formContainer = document.getElementById("form-container");
+    const myForm = document.getElementById("myForm");
+    const passwordForm = document.getElementById("password-form");
+    const submitBtn = document.getElementById("submit-btn");
+
+    myForm.addEventListener("submit", function(event) {
+          event.preventDefault();
+
+          // associate an input value with a variable
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const phone = document.getElementById("phone").value;
+
+          // print the variables in the console
+          console.log("Nom : " + name);
+          console.log("Adresse email : " + email);
+          console.log("Numéro de téléphone : " + phone);
+
+          // delete the input value
+          formContainer.removeChild(myForm);
+          // show the password input
+          passwordForm.style.display = "flex";
+
+
+    });
+
+    passwordForm.addEventListener("submit", function(event) {
+          event.preventDefault();
+
+          // associate an input value with a variable
+          const password = document.getElementById("password").value;
+          // print the variable in the console
+          console.log("Mot de passe : " + password);
+
+    });
+
+
+</script>
+
+</body>
+</html>
